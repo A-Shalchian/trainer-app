@@ -7,16 +7,22 @@ function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(""); // State to control the message
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const data = await signup(name, email, password); // Use the correct arguments
-      localStorage.setItem("token", data.token); // Store the token if needed
-      navigate("/"); // Redirect to home or another page after successful signup
+      localStorage.setItem("token", data.token); // Store the token
+      setMessage("Signed up successfully!");
+
+      // Navigate to Programs tab after 2 seconds
+      setTimeout(() => {
+        navigate("/programs");
+      }, 2000);
     } catch (error) {
-      alert(error.message); // Display the error message
+      setMessage(error.message); // Display the error message
     }
   };
 
@@ -59,6 +65,7 @@ function Signup() {
             Sign Up
           </button>
         </form>
+        {message && <p>{message}</p>} {/* Display the message */}
       </div>
     </div>
   );
