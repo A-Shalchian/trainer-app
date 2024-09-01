@@ -52,3 +52,118 @@
   background-color: #007bff; /* Highlight color */
   color: #fff;
 }
+
+/* Content Area */
+.profile-content {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Edit Profile Styles */
+.edit-profile-content {
+  text-align: left;
+}
+
+.edit-profile-form .input-group {
+  margin-bottom: 20px;
+}
+
+.edit-profile-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-profile-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+/* Logout Button Styles */
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Message Styles */
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9ecef;
+  color: #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 40px 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .profile-content {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .profile-sidebar li {
+    font-size: 16px;
+  }
+
+  .edit-profile-form input,
+  .save-button,
+  .logout-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .profile-content {
+    padding: 30px 20px;
+  }
+
+  .message {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
