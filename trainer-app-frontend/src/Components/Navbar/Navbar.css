@@ -36,24 +36,39 @@
 }
 
 .navbar-links a,
-.navbar-login a {
+.navbar-login,
+.navbar-profile {
   color: white;
   text-decoration: none;
   font-size: 16px; /* Smaller font size for mobile */
   display: inline-block; /* Ensures the transform property works */
   transition: transform 0.2s ease-in-out;
+  background: none; /* Remove default button/link background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Ensure pointer cursor for buttons */
+  padding: 8px 12px; /* Add padding for better clickable area */
 }
 
 .navbar-links a:hover,
-.navbar-login a:hover {
+.navbar-login:hover,
+.navbar-profile:hover {
   transform: scale(
     1.2
   ); /* Slightly smaller scale for better mobile experience */
   text-decoration: underline;
 }
 
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-login {
   margin-right: 5px; /* Margin adjustment for mobile */
+}
+
+.navbar-profile {
+  margin-right: 10px; /* Add margin to separate from login */
 }
 
 /* Tablet Styles (Medium Screens) */
@@ -71,8 +86,10 @@
   }
 
   .navbar-links a,
-  .navbar-login a {
+  .navbar-login,
+  .navbar-profile {
     font-size: 18px; /* Increase font size for better readability */
+    padding: 10px 15px; /* Increase padding for better readability */
   }
 }
 
@@ -91,8 +108,10 @@
   }
 
   .navbar-links a,
-  .navbar-login a {
+  .navbar-login,
+  .navbar-profile {
     font-size: 20px; /* Larger font size for desktops */
+    padding: 12px 20px; /* Larger padding for better readability */
   }
 
   .navbar-login {
