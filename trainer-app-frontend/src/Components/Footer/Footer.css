@@ -1,0 +1,94 @@
+/* Base Styles (Mobile-First) */
+.footer {
+  background-color: #333; /* Ensure consistent background color */
+  color: white;
+  padding: 10px 20px; /* Reduced padding for mobile */
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically on mobile */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px 0; /* Margin for mobile screens */
+  min-width: 200px; /* Minimum width for footer sections */
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 8px; /* Reduced margin for headings */
+  font-size: 18px; /* Font size for headings */
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  padding: 0;
+  font-size: 14px; /* Font size for content */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px; /* Margin between list items */
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  margin-top: 10px; /* Margin at the bottom of the footer */
+  font-size: 14px; /* Font size for footer bottom */
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row; /* Align sections horizontally on tablets */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    text-align: left; /* Align text to the left on larger screens */
+    margin: 5px; /* Reduced margin between sections */
+    min-width: 150px; /* Slightly smaller minimum width */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 20px 40px; /* Increased padding for desktops */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Sections remain in a row */
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    margin: 5px; /* Adjusted margin for spacing */
+    min-width: 150px; /* Consistent minimum width */
+  }
+
+  .footer-bottom {
+    margin-top: 15px; /* Slightly increased margin for desktop */
+    font-size: 16px; /* Slightly larger font size for desktop */
+  }
+}

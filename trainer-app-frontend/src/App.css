@@ -1,0 +1,33 @@
+/* App.css */
+
+/* Ensure the body and html take up the full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #f0f0f0; /* Global background color for all pages */
+}
+
+/* The main app container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+  background-color: #f0f0f0; /* Ensures background color for the main app container */
+}
+
+/* The main content area */
+.content {
+  flex: 1; /* Allows the content to grow and take up available space */
+}
+
+/* The footer will stick to the bottom because of flexbox */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Other existing styles */

@@ -1,0 +1,106 @@
+/* Base Styles (Mobile-First) */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo, links, and login */
+  align-items: center;
+  padding: 15px 10px; /* Smaller padding for mobile */
+  background-color: #333;
+  color: white;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  position: fixed; /* Make the navbar sticky */
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure it stays within the viewport */
+  z-index: 1000; /* Ensure it stays above other elements */
+  transition: top 0.3s ease-in-out; /* Smooth transition for hiding/showing */
+}
+
+.navbar-logo {
+  font-size: 20px; /* Smaller font size for mobile */
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the links */
+  flex-grow: 1; /* Allow links section to grow and take up space */
+  gap: 20px; /* Smaller gap on mobile */
+  margin-top: 10px; /* Add spacing for wrapped links */
+  margin-bottom: 10px;
+}
+
+.navbar-links a,
+.navbar-login a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Smaller font size for mobile */
+  display: inline-block; /* Ensures the transform property works */
+  transition: transform 0.2s ease-in-out;
+}
+
+.navbar-links a:hover,
+.navbar-login a:hover {
+  transform: scale(
+    1.2
+  ); /* Slightly smaller scale for better mobile experience */
+  text-decoration: underline;
+}
+
+.navbar-login {
+  margin-right: 5px; /* Margin adjustment for mobile */
+}
+
+/* Tablet Styles (Medium Screens) */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px; /* Increase padding for tablets */
+  }
+
+  .navbar-logo {
+    font-size: 22px; /* Slightly larger font size for tablets */
+  }
+
+  .navbar-links {
+    gap: 40px; /* Increase gap for tablets */
+  }
+
+  .navbar-links a,
+  .navbar-login a {
+    font-size: 18px; /* Increase font size for better readability */
+  }
+}
+
+/* Desktop Styles (Large Screens) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 20px 40px; /* More padding for desktops */
+  }
+
+  .navbar-logo {
+    font-size: 24px; /* Larger font size for desktops */
+  }
+
+  .navbar-links {
+    gap: 80px; /* Larger gap for desktop */
+  }
+
+  .navbar-links a,
+  .navbar-login a {
+    font-size: 20px; /* Larger font size for desktops */
+  }
+
+  .navbar-login {
+    margin-right: 10px; /* Increase margin for desktop */
+  }
+}
+
+/* Content below navbar should not be hidden by it */
+.content {
+  padding-top: 60px;
+}
