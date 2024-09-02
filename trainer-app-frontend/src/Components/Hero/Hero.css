@@ -1,106 +1,142 @@
-/* Base Styles (Mobile-First) */
 .hero {
-  color: #333; /* Darker text color for contrast */
-  padding: 60px 15px; /* Reduced padding for mobile */
+  background-image: url("./../../Assets/Images/bg-hero.jpg");
+  background-size: cover; /* Cover the entire hero section */
+  background-position: top; /* The background-position CSS property 
+  sets the initial position for each background image.  */
+  background-repeat: no-repeat;
+  padding: 40px 15px;
   text-align: center;
-  height: 90vh; /* Make the Hero section occupy 90% of the viewport height */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-container {
+  background-color: rgba(240, 240, 240, 0.9);
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content {
-  max-width: 90%; /* Adjust the width to fit smaller screens */
+  max-width: 90%;
   margin: 0 auto;
 }
 
+.hero-title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: 50px;
+  height: 50px;
+}
+
 .hero-title {
-  font-size: 32px; /* Smaller font size for mobile */
+  font-size: 32px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #272525;
 }
 
 .hero-subtitle {
-  font-size: 18px; /* Smaller font size for the subtitle */
-  margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #272525;
 }
 
-.hero-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
+.hero-scroll-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.hero-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  border: none; /* Ensure the buttons don't have borders */
-  cursor: pointer; /* Add pointer cursor on hover */
-}
-
-.hero-button:hover {
-  background-color: #0056b3; /* Darker button color on hover */
-}
-
-.start-now-button {
-  background-color: #28a745; /* Green button for Start Now */
-}
-
-.start-now-button:hover {
-  background-color: #218838; /* Darker green on hover */
-}
-
-.learn-more-button {
-  background-color: #007bff; /* Blue button for Learn More */
-}
-
-.learn-more-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.hero-scroll-button:hover {
+  transform: scale(1.2);
+  color: #0056b3;
 }
 
 /* Tablet Styles */
 @media (min-width: 768px) {
   .hero {
-    padding: 80px 30px; /* Increase padding for tablets */
+    padding: 80px 30px;
   }
 
   .hero-content {
-    max-width: 700px; /* Adjust max-width for tablets */
+    max-width: 700px;
   }
 
   .hero-title {
-    font-size: 40px; /* Larger font size for tablets */
+    font-size: 40px;
     margin-bottom: 20px;
   }
 
   .hero-subtitle {
-    font-size: 22px; /* Adjust subtitle font size for tablets */
+    font-size: 22px;
   }
 }
 
 /* Desktop Styles */
 @media (min-width: 1024px) {
   .hero {
-    padding: 100px 40px; /* Adequate padding for desktops */
+    padding: 100px 40px;
   }
 
   .hero-content {
-    max-width: 800px; /* Increase max-width for desktops */
+    max-width: 800px;
   }
 
   .hero-title {
-    font-size: 48px; /* Larger font size for desktops */
+    font-size: 50px;
     margin-bottom: 20px;
   }
 
   .hero-subtitle {
-    font-size: 24px; /* Adjust subtitle font size for desktops */
+    font-size: 25px;
+  }
+
+  .hero-logo {
+    width: 70px;
+    height: 70px;
+    padding-top: 30px;
   }
 }
