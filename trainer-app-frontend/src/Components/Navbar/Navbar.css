@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between; /* Space between logo, links, and login */
   align-items: center;
-  padding: 10px 8px; /* Smaller padding for mobile */
+  padding: 7.5px 5.5px; /* Smaller padding for mobile */
   background-color: #333;
   color: white;
   flex-wrap: wrap; /* Allow wrapping for small screens */
@@ -17,12 +17,13 @@
 
 .navbar-logo {
   font-size: 18px; /* Smaller font size for mobile */
-  font-weight: bold;
+  font-weight: 900; /* Bold font weight */
 }
 
 .navbar-logo a {
   text-decoration: none;
   color: white;
+  font-weight: 900; /* Bold font weight */
 }
 
 .navbar-links {
@@ -41,12 +42,18 @@
   color: white;
   text-decoration: none;
   font-size: 14px; /* Smaller font size for mobile */
+  font-weight: 900; /* Bold font weight */
   display: inline-block; /* Ensures the transform property works */
   transition: transform 0.2s ease-in-out;
   background: none; /* Remove default button/link background */
   border: none; /* Remove default button border */
   cursor: pointer; /* Ensure pointer cursor for buttons */
   padding: 6px 10px; /* Add padding for better clickable area */
+}
+
+.navbar-login {
+  margin-right: 4px;
+  font-size: 14px;
 }
 
 .navbar-links a:hover,
@@ -74,7 +81,7 @@
 /* Tablet Styles (Medium Screens) */
 @media (min-width: 768px) {
   .navbar {
-    padding: 15px; /* Increase padding for tablets */
+    padding: 12.5px; /* Increase padding for tablets */
   }
 
   .navbar-logo {
@@ -89,14 +96,19 @@
   .navbar-login,
   .navbar-profile {
     font-size: 16px; /* Increase font size for better readability */
+    font-weight: 900; /* Bold font weight */
     padding: 8px 12px; /* Increase padding for better readability */
+  }
+
+  .navbar-login {
+    font-size: 16px;
   }
 }
 
 /* Desktop Styles (Large Screens) */
 @media (min-width: 1024px) {
   .navbar {
-    padding: 15px 30px; /* More padding for desktops */
+    padding: 10px 25px; /* More padding for desktops */
   }
 
   .navbar-logo {
@@ -111,11 +123,13 @@
   .navbar-login,
   .navbar-profile {
     font-size: 18px; /* Larger font size for desktops */
+    font-weight: 900; /* Bold font weight */
     padding: 10px 15px; /* Larger padding for better readability */
   }
 
   .navbar-login {
     margin-right: 8px; /* Increase margin for desktop */
+    font-size: 18px;
   }
 }
 
