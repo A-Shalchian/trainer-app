@@ -19,7 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} /> {/* Login page */}
           <Route path="/signup" element={<Signup />} /> {/* Signup route */}
           <Route path="/profile" element={<Profile />} /> {/* Profile page */}
-          <Route path="About" element={<About />} /> {/* About page */}
+          <Route path="/about" element={<About />} /> {/* About page */}
         </Routes>
         <Footer />
       </div>
