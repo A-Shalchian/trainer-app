@@ -1,0 +1,93 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.about-page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+  padding: 20px;
+}
+
+.about-content {
+  background-color: white;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+#about-1 {
+  background-color: #e3f2fd;
+}
+
+#about-2 {
+  background-color: #fce4ec;
+}
+
+#about-3 {
+  background-color: #e8f5e9;
+}
+
+#about-4 {
+  background-color: #fff3e0;
+}
+
+#about-5 {
+  background-color: #ede7f6;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    max-width: 800px;
+    padding: 60px;
+  }
+
+  .about-section h2 {
+    font-size: 40px;
+  }
+
+  .about-section p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-content {
+    max-width: 1000px;
+    padding: 80px;
+  }
+
+  .about-section h2 {
+    font-size: 48px;
+  }
+
+  .about-section p {
+    font-size: 22px;
+  }
+}
