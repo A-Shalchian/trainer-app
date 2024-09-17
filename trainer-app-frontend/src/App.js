@@ -9,7 +9,7 @@ import Signup from "./Pages/Signup/Signup";
 import Profile from "./Pages/Profile/Profile";
 import About from "./Pages/About/About";
 import Programs from "./Pages/Programs/Programs";
-import Support from "./Pages/Support/Support";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <Route path="/about" element={<About />} /> {/* About page */}
           <Route path="/programs" element={<Programs />} />
           {/* Programs page */}
-          <Route path="/support" element={<Support />} />
+          <Route path="/contact" element={<Contact />} /> {/* Contact page */}
         </Routes>
         <Footer />
       </div>
