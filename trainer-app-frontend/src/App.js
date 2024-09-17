@@ -9,6 +9,7 @@ import Signup from "./Pages/Signup/Signup";
 import Profile from "./Pages/Profile/Profile";
 import About from "./Pages/About/About";
 import Programs from "./Pages/Programs/Programs";
+import Support from "./Pages/Support/Support";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} /> {/* About page */}
           <Route path="/programs" element={<Programs />} />
           {/* Programs page */}
+          <Route path="/support" element={<Support />} />
         </Routes>
         <Footer />
       </div>
