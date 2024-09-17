@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { setupNavbarScroll } from "./navbarScroll";
+import { setupNavbarScroll } from "./NavbarScroll";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {

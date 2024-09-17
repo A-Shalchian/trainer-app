@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import "./Hero.css";
-import Logo from "./../../Assets/Images/logo2.png";
+import Logo from "./../../../../Assets/Images/logo2.png";
 import { FaArrowDown } from "react-icons/fa";
-import BackgroundImage from "./../../Assets/Images/bg-hero.jpg";
+import BackgroundImage from "./../../../../Assets/Images/bg-hero.jpg";
 
 function Hero() {
   const navigate = useNavigate(); // Initialize the navigate function
