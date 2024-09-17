@@ -62,8 +62,8 @@ function About() {
             feedback. Your journey is important to us, and we're always here to
             support you.
           </p>
-          <Link to="/support" className="support-button">
-            Support
+          <Link to="/contact" className="contact-button">
+            Contact
           </Link>
         </div>
       </section>

@@ -23,7 +23,12 @@ body {
 }
 
 .about-content {
-  background-color: #f7f7f7;
+  background: rgb(162, 188, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(162, 188, 214, 1) 19%,
+    rgba(171, 131, 176, 1) 79%
+  );
   padding: 40px 60px;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -33,30 +38,22 @@ body {
 
 .about-section h2 {
   font-size: 36px;
-  color: #3e82ca;
+  color: #106aca;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
 .about-section p {
   font-size: 18px;
   color: #333;
+  font-weight: 700;
   line-height: 2;
-}
-
-#about {
-  background: rgb(235, 178, 237);
-  background: linear-gradient(
-    90deg,
-    rgba(235, 178, 237, 1) 19%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(235, 178, 237, 1) 79%
-  );
 }
 
 /* Button styles */
 .start-now-button,
 .careers-button,
-.support-button {
+.contact-button {
   position: relative;
   display: inline-block;
   margin-top: 20px;
@@ -83,14 +80,14 @@ body {
 
 .start-now-button:hover,
 .careers-button:hover,
-.support-button:hover {
+.contact-button:hover {
   letter-spacing: 3px;
 }
 
 /* Adjusting z-index to make the text visible */
 .start-now-button::before,
 .careers-button::before,
-.support-button::before {
+.contact-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -100,19 +97,19 @@ body {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
   transform: skewX(45deg) translateX(0);
   transition: 0.5s;
-  z-index: -1; /* Make sure the before pseudo-element stays behind the button text */
+  z-index: -1;
 }
 
 .start-now-button:hover::before,
 .careers-button:hover::before,
-.support-button:hover::before {
+.contact-button:hover::before {
   transform: skewX(45deg) translateX(200px);
 }
 
 /* Button light-up effect */
 .start-now-button::after,
 .careers-button::after,
-.support-button::after {
+.contact-button::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -128,7 +125,7 @@ body {
 
 .start-now-button:hover::after,
 .careers-button:hover::after,
-.support-button:hover::after {
+.contact-button:hover::after {
   top: 0;
   height: 50%;
   width: 80%;
@@ -150,8 +147,8 @@ body {
     0 0 60px #2db2ff;
 }
 
-.support-button::before,
-.support-button::after {
+.contact-button::before,
+.contact-button::after {
   background: #1eff45;
   box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
     0 0 60px #1eff45;
