@@ -1,6 +1,12 @@
 /* Base Styles (Mobile-First) */
 .about {
   color: #333;
+  background: rgb(59, 69, 68);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 69, 68, 1) 15%,
+    rgba(51, 48, 54, 1) 90%
+  );
   padding: 40px 15px; /* Reduced padding for mobile */
   text-align: center;
 }
@@ -16,7 +22,8 @@
 }
 
 .about p {
-  font-size: 16px; /* Smaller font size for mobile */
+  font-size: 16px;
+  font-weight: 700; /* Smaller font size for mobile */
   margin-bottom: 20px;
 }
 
